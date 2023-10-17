@@ -10,7 +10,5 @@
 
 # Nomor 2
 Buat website arjuna.it30.com di node ArjunaLoadBalancer
-dengan cara 
-///
-nano
-///
+dengan cara ###nano
+
