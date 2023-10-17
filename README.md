@@ -87,6 +87,12 @@ iface eth0 inet static
 ```
 ArjunaLoadBalancer
 ```
+auto eth0
+iface eth0 inet static
+	address 192.168.2.2
+	netmask 255.255.255.0
+	gateway 192.168.2.1
+```
 
 # Nomor 2
 Buat website arjuna.it30.com di node ArjunaLoadBalancer
