@@ -8,6 +8,86 @@
 - Ketikkan  echo nameserver 192.168.122.1 > /etc/resolv.conf pada setiap node selain router
 - apt-get update dan apt-get install bind9 -y pada ArjunaLoadBalancer, WerkudaraDNSSlave dan YudhistiraDNSMaster
 
+Router
+```
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+	address 192.168.1.1
+	netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+	address 192.168.2.1
+	netmask 255.255.255.0
+```
+
+Nakula Client
+```
+auto eth0
+iface eth0 inet static
+	address 192.168.1.2
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+```
+
+SadewaClient
+```
+auto eth0
+iface eth0 inet static
+	address 192.168.1.3
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+```
+
+AbimanyuWebServer
+```
+auto eth0
+iface eth0 inet static
+	address 192.168.1.4
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+```
+
+PrabukusumaWebServer
+```
+ auto eth0
+iface eth0 inet static
+	address 192.168.1.5
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+```
+
+ WisanggeniWebServer
+```
+ auto eth0
+iface eth0 inet static
+	address 192.168.1.6
+	netmask 255.255.255.0
+	gateway 192.168.1.1
+```
+
+ YudhistiraDNSMaster
+```
+auto eth0
+iface eth0 inet static
+	address 192.168.2.4
+	netmask 255.255.255.0
+	gateway 192.168.2.1
+```
+WerkudaraDNSSlave
+```
+auto eth0
+iface eth0 inet static
+	address 192.168.2.3
+	netmask 255.255.255.0
+	gateway 192.168.2.1
+```
+ArjunaLoadBalancer
+```
+
 # Nomor 2
 Buat website arjuna.it30.com di node ArjunaLoadBalancer
 dengan cara ###nano
